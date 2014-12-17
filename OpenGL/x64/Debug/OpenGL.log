@@ -1,0 +1,41 @@
+﻿Build started 12/14/2014 10:36:50 PM.
+     1>Project "C:\Users\Aditya\Desktop\ad\New Folder\cs\OglTutorial-master\OpenGL\OpenGL.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt GLApp001.cpp GLApp002.cpp GLApp003.cpp GLApp004.cpp GLApp005.cpp GLApp006.cpp GLApp007.cpp GLApps.cpp GLGeometry.cpp GLMain.cpp GLShader.cpp GLTexture.cpp GLTransforms.cpp GLUtils.cpp GLVertexBuffer.cpp main.cpp
+         main.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLApps.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLVertexBuffer.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLIncludes.h(8): fatal error C1083: Cannot open include file: 'GL/freeglut.h': No such file or directory
+         GLUtils.cpp
+         GLTransforms.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLTransforms.h(5): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLTexture.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLTexture.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLShader.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLShader.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLMain.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLIncludes.h(8): fatal error C1083: Cannot open include file: 'GL/freeglut.h': No such file or directory
+         GLGeometry.cpp
+     1>GLGeometry.cpp(216): warning C4018: '<' : signed/unsigned mismatch
+         GLApps.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLIncludes.h(8): fatal error C1083: Cannot open include file: 'GL/freeglut.h': No such file or directory
+         GLApp007.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLShader.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLApp006.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLShader.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLApp005.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLShader.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLApp004.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLShader.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLApp003.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLShader.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLApp002.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLShader.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         GLApp001.cpp
+     1>c:\users\aditya\desktop\ad\new folder\cs\ogltutorial-master\opengl\GLShader.h(6): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         Generating Code...
+     1>Done Building Project "C:\Users\Aditya\Desktop\ad\New Folder\cs\OglTutorial-master\OpenGL\OpenGL.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.96

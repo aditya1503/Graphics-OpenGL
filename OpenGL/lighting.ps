@@ -1,0 +1,53 @@
+#version 400
+in vec4 world_pos;
+in vec3 world_normal;
+in vec3 color;
+in vec2 texcoord;
+
+layout(location = 0) out vec4 FragColor;
+
+uniform vec3 light_pos;
+uniform vec3 eye_pos;
+
+uniform vec4 light_col;
+
+uniform vec4 mat_ambient = vec4(0.0,0.0,0.0,0.0);
+uniform float mat_diffuse = 0.0;
+uniform float mat_specular = 0.0;
+
+uniform sampler2D tex;
+
+void main()
+{
+	//Get surface color
+	vec4 surface_color	= texture(tex, texcoord);
+
+	//Renormalize world normal (Quiz: why?)
+	vec3 normal_vector = normalize(world_normal);
+
+	vec4 ambient_color	= surface_color * mat_ambient;
+	vec4 diffuse_color  = vec4(0.0);
+	vec4 specular_color = vec4(0.0);
+
+	vec3 light_vec		= normalize(light_pos - world_pos.xyz);
+	float light_dot_n	= dot(light_vec,normal_vector);
+	
+	//Quiz : Why have this condition? Is it necessary?
+	if (light_dot_n > 0.0)
+	{
+		//Compute Diffuse
+		diffuse_color	= surface_color * light_col * mat_diffuse * light_dot_n;
+
+		//Compute Specular
+		if (mat_specular > 0.0)
+		{
+			vec3 reflect_vec	= 2.0f * light_dot_n * normal_vector - light_vec;
+			vec3 eye_vector		= normalize(eye_pos - world_pos.xyz);
+			float eye_dot_n		= dot(eye_vector, reflect_vec);
+			float specular		= pow(max(0.0f,eye_dot_n),mat_specular);
+			specular_color		= light_col * specular;
+		}
+	}
+
+	FragColor		= ambient_color + diffuse_color + specular_color;
+}

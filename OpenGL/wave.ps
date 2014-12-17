@@ -1,0 +1,12 @@
+#version 400
+in vec3 Color;
+layout(location = 0) out vec4 FragColor;
+
+uniform float color_phase = 0.0;
+
+void main()
+{	
+	vec3 wave_color = vec3(sin(color_phase + gl_FragCoord.x *0.01), cos(color_phase + gl_FragCoord.y * 0.01), 1.0);
+
+	FragColor = vec4((Color+wave_color)*0.5, 1.0);
+}
